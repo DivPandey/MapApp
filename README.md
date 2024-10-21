@@ -111,7 +111,22 @@ Pin Drop is a sophisticated web application designed for seamless map interactio
      return pins ? JSON.parse(pins) : [];
    }
    ```
+## Setup and Deployment
 
+### Development Environment
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/pin-drop.git
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+4. Access the application at `http://localhost:3000`
 
 
 ## Conclusion
