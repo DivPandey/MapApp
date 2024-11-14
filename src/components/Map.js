@@ -34,25 +34,25 @@ function AddPinOnClick({ onAddPin, onDeletePin }) {
   return newPin ? (
     <Marker position={[newPin.lat, newPin.lng]}>
       <Popup onClose={() => setNewPin(null)}>
-        <div className="w-64">
+        <div className="w-[250px] md:w-64">
           <textarea
             value={newPin.remarks}
             onChange={handleRemarkChange}
             placeholder="Enter remarks..."
-            className="w-full p-2 border border-gray-300 rounded mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="w-full p-2 border border-gray-300 rounded mb-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
             rows="3"
           />
-          <div className="flex justify-between">
+          <div className="flex flex-col md:flex-row gap-2 md:justify-between">
             <button 
               onClick={handleSavePin}
-              className="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50"
+              className="w-full md:w-auto bg-emerald-500 text-white px-3 py-1.5 md:px-4 md:py-2 text-sm rounded hover:bg-emerald-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50"
             >
               Save Pin
             </button>
             {newPin.id && (
               <button 
                 onClick={handleDeletePin}
-                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+                className="w-full md:w-auto bg-red-500 text-white px-3 py-1.5 md:px-4 md:py-2 text-sm rounded hover:bg-red-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
               >
                 Delete Pin
               </button>
